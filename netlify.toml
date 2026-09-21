@@ -1,0 +1,22 @@
+# Configuração do Netlify para o Estoque Vidigal (projeto Vite).
+#
+# O Netlify lê este arquivo automaticamente quando você conecta o
+# repositório do GitHub — não precisa configurar nada manualmente na
+# interface além das variáveis de ambiente (ver README, seção 11).
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Este projeto tem uma única página (index.html) que troca de "aba" com
+# JavaScript, sem usar rotas de URL — então não é necessário nenhum
+# redirect de SPA. Se um dia o projeto ganhar rotas de verdade (ex.:
+# /produtos, /relatorios como URLs), adicione aqui:
+#
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200

@@ -1,0 +1,32 @@
+/* Mobile é o padrão (regras em base/layout/components.css). Aqui só
+   ficam os ajustes para telas maiores — tablet e desktop. */
+
+/* Tablet: dashboard em 3+3 */
+@media (min-width:640px){
+  .dashboard-grid{ grid-template-columns:repeat(3,1fr); }
+  .modal-overlay{ align-items:center; }
+  .modal-sheet{ border-radius:16px; max-height:86vh; }
+}
+
+/* Desktop: sidebar fixa + conteúdo central, dashboard em 6 colunas */
+@media (min-width:900px){
+  #app{ max-width:1220px; }
+  aside.sidebar{
+    display:flex; flex-direction:column; width:224px; flex:none;
+    border-right:1px solid var(--border); padding:18px 10px; gap:2px;
+    position:sticky; top:var(--topbar-h); align-self:flex-start; height:calc(100vh - var(--topbar-h));
+    background:var(--surface); overflow-y:auto;
+  }
+  aside.sidebar button{
+    display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; border:none; background:none;
+    font-family:var(--font-body); font-size:14px; font-weight:500; color:var(--ink-soft); cursor:pointer; text-align:left; width:100%;
+  }
+  aside.sidebar button svg{ width:18px; height:18px; stroke:var(--ink-soft); flex:none; }
+  aside.sidebar button.active{ background:var(--wine-tint); color:var(--wine); }
+  aside.sidebar button.active svg{ stroke:var(--wine); }
+  aside.sidebar .side-sep{ height:1px; background:var(--border); margin:10px 4px; }
+  nav.bottomnav{ display:none; }
+  main#content{ padding:22px 26px 40px; }
+  .charts-grid{ grid-template-columns:1fr 1fr; }
+  .dashboard-grid{ grid-template-columns:repeat(6,1fr); gap:12px; }
+}

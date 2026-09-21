@@ -1,0 +1,20 @@
+{
+  "name": "estoque-vidigal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema de controle de estoque e distribuição de vinhos — Estoque Vidigal",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "chart.js": "^4.4.4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  }
+}
